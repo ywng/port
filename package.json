@@ -5,6 +5,7 @@
   "description": "a Sails application",
   "dependencies": {
     "sails": "0.9.16",
+    "sails-mongo": "https://github.com/balderdashy/sails-mongo/archive/v0.10.tar.gz",
     "grunt": "0.4.1",
     "sails-disk": "~0.9.0",
     "ejs": "0.8.4",
