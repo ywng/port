@@ -37,6 +37,8 @@ module.exports = {
   // to 80 (http://) or 443 (https://) if you have an SSL certificate
 
   port: process.env.PORT || 1337,
+  port: process.env.OPENSHIFT_NODEJS_PORT || 8080,
+  host: process.env.OPENSHIFT_NODEJS_IP,
 
 
 
