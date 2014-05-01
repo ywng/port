@@ -17,8 +17,13 @@ module.exports.adapters = {
   'default': 'mongo',
 
   mongo: {
-    module: 'sails-mongo',
-    url: 'mongodb://admin:SCVAsWkUFckU@localhost:$OPENSHIFT_MONGODB_DB_PORT/port'
+  	module: 'sails-mongo',
+    host: '127.4.212.3',
+    port: 27017,
+    user: 'admin',
+    password: 'SCVAsWkUFckU',
+    database: 'port'
+    
    
   }
 
