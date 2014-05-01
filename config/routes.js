@@ -32,9 +32,22 @@ module.exports.routes = {
   // located at `views/home/index.ejs`
   // 
   // (This would also work if you had a file at: `/views/home.ejs`)
-  '/': {
-    view: 'home/index'
-  }
+   '/': {
+      view: 'homepage'
+    },
+    'post /login': {
+      controller: 'AuthController',
+      action: 'login'
+    },
+    'get /logout': {
+      controller: 'AuthController',
+      action: 'logout'
+    },
+    /** Create the route to handle user activations */
+    'get /user/:id/activate/:token': {
+      controller: 'UserController',
+      action: 'activate'
+    }
 
   /*
   // But what if you want your home page to display
