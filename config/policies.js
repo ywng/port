@@ -24,7 +24,7 @@ module.exports.policies = {
 	AuthController: {
         'post login': true,
         'get logout': 'authenticated'
-	}
+	},
 
 	StockController: {
         'post add': 'authenticated'
