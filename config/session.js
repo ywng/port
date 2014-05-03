@@ -34,31 +34,31 @@ module.exports.session = {
   // on localhost is expected.
   // Read more about options at: https://github.com/visionmedia/connect-redis
   //
-  /*host: 'localhost',
+  host: 'localhost',
   port: 6379,
   ttl: 60,
   db: 0,
   pass: '',
-  prefix: 'sess:'*/
+  prefix: 'sess:'
 
 
   // Uncomment the following lines to use your Mongo adapter as a session store
   // adapter: 'mongo',
   //
-   host: '127.4.212.2',
-   port: 27017,
-   db: 'port',
-   collection: 'sessions',
+  // host: 'localhost',
+  // port: 27017,
+  // db: 'sails',
+  // collection: 'sessions',
   //
   // Optional Values:
   //
   // # Note: url will override other connection settings
   // url: 'mongodb://user:pass@host:port/database/collection',
   //
-   username: 'admin',
-   password: 'SCVAsWkUFckU',
-   auto_reconnect: false,
-   ssl: false,
-   stringify: true
+  // username: '',
+  // password: '',
+  // auto_reconnect: false,
+  // ssl: false,
+  // stringify: true
 
 };
