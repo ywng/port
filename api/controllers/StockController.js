@@ -24,7 +24,7 @@ module.exports = {
    */
    add: function (req, res) {
     
-   var params = req.params.all();
+    var params = req.params.all();
     Stock.create(params, function(err, stock){
       if (err){ 
         res.send(500, err); 
