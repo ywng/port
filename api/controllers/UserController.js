@@ -31,7 +31,7 @@ module.exports = {
           var emailTemplate = res.render('email/email.ejs', {user: user,server:sails.config.server.server_url}, function(err, list){  
 
             nodemailer.send({
-              name:       user.firstName + ' ' + user.lastName,
+              name:       "Portfolio & Trade",
               from:       sails.config.nodemailer.from,
               to:         user.email,
               subject:       'New Account Acivation Required',

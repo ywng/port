@@ -34,7 +34,7 @@ module.exports.routes = {
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': {
     view: 'homepage'
-  }
+  },
   'post /login': {
     controller: 'AuthController',
     action: 'login'
