@@ -25,6 +25,10 @@ module.exports.policies = {
         'post login': true,
         'get logout': 'authenticated'
 	}
+
+	StockController: {
+        'post add': 'authenticated'
+	}
   /*
 	// Here's an example of adding some policies to a controller
 	RabbitController: {

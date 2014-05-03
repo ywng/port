@@ -47,6 +47,10 @@ module.exports.routes = {
   'get /user/:id/activate/:token': {
     controller: 'UserController',
     action: 'activate'
+  },
+  'post /stock/add': {
+    controller: 'StockController',
+    action: 'login'
   }
 
   // Custom routes here...
