@@ -60,16 +60,7 @@ module.exports = {
     return res.json({
       hello: 'world'
     });
-  },
-
-
-
-
-  /**
-   * Overrides for the settings in `config/controllers.js`
-   * (specific to StockController)
-   */
-  _config: {}
+  }
 
   
 };
