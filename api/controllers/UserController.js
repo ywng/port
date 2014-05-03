@@ -27,7 +27,7 @@ module.exports = {
     User.create(params, function(err, user){
       if (err){ res.send(500, err); }else{
         if(sails.config.user.requireUserActivation){
-          res.send(200, "ac");
+          sails.log.debug("require activation");
           var emailTemplate = res.render('email/email.ejs', {user: user}, function(err, list){  
 
             nodemailer.send({
@@ -39,12 +39,12 @@ module.exports = {
             }, function(err, response){
               sails.log.debug('nodemailer sent', err, response);
             });
+
             res.send(200, user);
 
           });
         }else{
           sails.log.debug("didn't require activation");
-          res.send(200, "no ac");
           res.send(200, user);
         }
       }

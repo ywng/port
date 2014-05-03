@@ -4,6 +4,6 @@ module.exports.nodemailer = {
   from: 'port.trade.mgt@gmail.com',
   prepend_subject: false,
   host: 'ssl://smtp.googlemail.com',
-  user: 'port.trade.mgt@gmail.com',
+  user: 'port.trade.mgt',
   pass: 'abcd1919'
 }
