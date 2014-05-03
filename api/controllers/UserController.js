@@ -55,10 +55,28 @@ module.exports = {
    */
    activate: function (req, res) {
     
-    // Send a JSON response
-    return res.json({
-      hello: 'world'
+    var params = req.params.all();
+
+    sails.log.debug('activation action');
+    
+    //Activate the user that was requested.
+    User.update({
+      id: params.id,
+      activationToken: params.token
+    },{
+      activated: true
+    }, function(err, user) {
+      // Error handling
+      if (err) {
+        sails.log.debug(err);
+        res.send(500, err);
+      // Updated users successfully!
+      } else {
+        sails.log.debug("User activated:", user);
+        res.send(200, user);
+      }
     });
+
   },
 
 
