@@ -13,7 +13,7 @@ module.exports = {
     var transport = nodemailer.createTransport("SMTP",{
         service: "Gmail",
         auth: {
-            user: ails.config.nodemailer.user,
+            user: sails.config.nodemailer.user,
             pass: sails.config.nodemailer.pass
         }
     });
