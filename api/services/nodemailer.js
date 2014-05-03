@@ -8,7 +8,16 @@ module.exports = {
    */
   send: function(email, cb){
 
-    /** sets up the modemailer smtp transport */
+    
+    // create reusable transport method (opens pool of SMTP connections)
+    var transport = nodemailer.createTransport("SMTP",{
+        service: "Gmail",
+        auth: {
+            user: ails.config.nodemailer.user,
+            pass: sails.config.nodemailer.pass
+        }
+    });
+    /*
     var transport = nodemailer.createTransport("SMTP", {
       host: sails.config.nodemailer.host,
       secureConnection: sails.config.nodemailer.usessl, // use SSL
@@ -17,7 +26,7 @@ module.exports = {
           user: sails.config.nodemailer.user, 
           pass: sails.config.nodemailer.pass 
       }
-    });
+    });*/
 
     /** sets up the mail options, from and such like that **/
     var from    = email.from || 'nobody@nobody.com';
