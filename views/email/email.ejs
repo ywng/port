@@ -234,7 +234,7 @@ Email on Acid - http://www.emailonacid.com/blog/details/C18/doctype_-_the_black_
 			<!-- Yahoo Link color fix updated: Simply bring your link styling inline. -->
 			<h1>Hey There <%= user.firstName %></h1>
 			Welcome to the sails-chat site. Click the link to activate your account!
-			<a href="http://localhost:1337/user/<%= user.id %>/activate/<%= user.activationToken %>" target ="_blank" title="Activate Your Account">http://localhost:1337/user/<%= user.id %>/activate/<%= user.activationToken %></a>
+			<a href="<%= server %>user/<%= user.id %>/activate/<%= user.activationToken %>" target ="_blank" title="Activate Your Account">http://localhost:1337/user/<%= user.id %>/activate/<%= user.activationToken %></a>
 		</td>
 	</tr>
 	</table>

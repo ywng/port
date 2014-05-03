@@ -28,7 +28,7 @@ module.exports = {
       if (err){ res.send(500, err); }else{
         if(sails.config.user.requireUserActivation){
           sails.log.debug("require activation");
-          var emailTemplate = res.render('email/email.ejs', {user: user}, function(err, list){  
+          var emailTemplate = res.render('email/email.ejs', {user: user,server:sails.config.server.server_url}, function(err, list){  
 
             nodemailer.send({
               name:       user.firstName + ' ' + user.lastName,
